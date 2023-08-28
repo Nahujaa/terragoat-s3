@@ -7,6 +7,7 @@ resource "aws_kms_key" "logs_key" {
     yor_trace = "bee04c7b-164a-4278-82e1-4ad345f0e8b7"
     owner = "cmartinsjr_paloaltonetworks_com"
   }
+  enable_key_rotation = true
 }
 
 resource "aws_kms_alias" "logs_key_alias" {
