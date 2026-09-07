@@ -10,7 +10,8 @@ resource "aws_s3_bucket" "data" {
   bucket = "${local.resource_prefix.value}-data"
   tags = {
     yor_trace = "ccf11b7f-e248-4980-bdb7-84ab30a83244"
-    owner = "cmartinsjr_paloaltonetworks_com"
+    owner     = "cmartinsjr_paloaltonetworks_com"
+    Env       = "prod"
   }
 }
 resource "aws_s3_bucket_public_access_block" "data" {
